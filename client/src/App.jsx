@@ -1,81 +1,58 @@
 import { useState } from "react";
 import "./App.css";
-import Job from "./Job";
-import User from "./User";
-import GasPlanets from "./GasPlanets";
+import AddTaskInput from "./AddTaskInput";
+import TaskList from "./TaskList";
 
 function App() {
- const users = [
-  { name: "jack", age: 21 },
-  { name: "jill", age: 25 },
-  { name: "bill", age: 29 },
-  { name: "phil", age: 23 },
- ];
+ const [tasks, setTasks] = useState([]);
+ const [newTask, setNewTask] = useState("");
 
- const planets = [
-  { name: "Mars", isGasPlanet: false },
-  { name: "Earth", isGasPlanet: false },
-  { name: "Jupiter", isGasPlanet: true },
-  { name: "Venus", isGasPlanet: false },
-  { name: "Neptune", isGasPlanet: true },
-  { name: "Uranus", isGasPlanet: true },
- ];
+ //  grabbing the value from the input and updating the value of newTask to be whatever is typed into the input box
+ function handleChange(e) {
+  setNewTask(e.target.value);
+ }
 
- const [hideShowText, setHideShowText] = useState(true);
- const [btnText, setBtnText] = useState("hide");
- const [counter, setCounter] = useState(0);
+ function addTask() {
+  const task = {
+   id: tasks.length < 1 ? 1 : tasks.at(-1).id + 1,
+   taskName: newTask,
+   completed: false,
+  };
+  setTasks([...tasks, task]);
+ }
+
+ function deleteTask(taskId) {
+  setTasks(tasks.filter(({ id }) => id !== taskId));
+ }
+
+ function completeToggle(taskId) {
+  // const updatedTasks = tasks.map((task) => {
+  //  if (task.id === taskId) {
+  //   return { ...task, completed: true };
+  //  } else {
+  //   return task;
+  //  }
+  // });
+  setTasks(
+   tasks.map((task) =>
+    task.id === taskId ? { ...task, completed: true } : task
+   )
+  );
+ }
 
  return (
   <div className="App">
-   <div>
-    <button
-     onClick={() => {
-      setHideShowText(!hideShowText);
-      setBtnText(btnText === "hide" ? "show" : "hide");
-     }}
-    >
-     {btnText}
-    </button>
-    {hideShowText && <h1>Hutner</h1>}
-   </div>
-   <div>
-    <button
-     onClick={() => {
-      setCounter(counter + 1);
-     }}
-    >
-     increase
-    </button>
-    <button
-     onClick={() => {
-      setCounter(counter - 1);
-     }}
-    >
-     decrease
-    </button>
-    <button
-     onClick={() => {
-      setCounter(0);
-     }}
-    >
-     set to 0
-    </button>
-    <br />
-    {counter}
-   </div>
-
-   {/* {planets.map(
-    ({ name, isGasPlanet }, i) =>
-     isGasPlanet && <GasPlanets key={i} name={name} />
-   )} */}
-   <br />
-   {/* {users.map(({ name, age }, i) => {
-    return <User key={i} name={name} age={age} />;
-   })} */}
-   <br />
-   {/* <Job salary={90000} position={"Senior SWE"} company={"Amazon"} />
-   <Job salary={120000} position={"Principal SWE"} company={"Google"} />
-   <Job salary={80000} position={"Junior SWE"} company={"Netflix"} /> */}
+   <AddTaskInput handleChange={handleChange} addTask={addTask} />
+   {tasks.map(({ id, taskName, completed }) => (
+    <TaskList
+     key={id}
+     id={id}
+     completed={completed}
+     taskName={taskName}
+     deleteTask={deleteTask}
+     completeToggle={completeToggle}
+    />
+   ))}
   </div>
  );
 }
