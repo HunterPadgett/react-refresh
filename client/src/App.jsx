@@ -21,20 +21,61 @@ function App() {
   { name: "Uranus", isGasPlanet: true },
  ];
 
+ const [hideShowText, setHideShowText] = useState(true);
+ const [btnText, setBtnText] = useState("hide");
+ const [counter, setCounter] = useState(0);
+
  return (
   <div className="App">
-   {planets.map(
+   <div>
+    <button
+     onClick={() => {
+      setHideShowText(!hideShowText);
+      setBtnText(btnText === "hide" ? "show" : "hide");
+     }}
+    >
+     {btnText}
+    </button>
+    {hideShowText && <h1>Hutner</h1>}
+   </div>
+   <div>
+    <button
+     onClick={() => {
+      setCounter(counter + 1);
+     }}
+    >
+     increase
+    </button>
+    <button
+     onClick={() => {
+      setCounter(counter - 1);
+     }}
+    >
+     decrease
+    </button>
+    <button
+     onClick={() => {
+      setCounter(0);
+     }}
+    >
+     set to 0
+    </button>
+    <br />
+    {counter}
+   </div>
+
+   {/* {planets.map(
     ({ name, isGasPlanet }, i) =>
      isGasPlanet && <GasPlanets key={i} name={name} />
-   )}
+   )} */}
    <br />
-   {users.map(({ name, age }, i) => {
+   {/* {users.map(({ name, age }, i) => {
     return <User key={i} name={name} age={age} />;
-   })}
+   })} */}
    <br />
-   <Job salary={90000} position={"Senior SWE"} company={"Amazon"} />
+   {/* <Job salary={90000} position={"Senior SWE"} company={"Amazon"} />
    <Job salary={120000} position={"Principal SWE"} company={"Google"} />
-   <Job salary={80000} position={"Junior SWE"} company={"Netflix"} />
+   <Job salary={80000} position={"Junior SWE"} company={"Netflix"} /> */}
   </div>
  );
 }
