@@ -1,0 +1,11 @@
+#root {
+ max-width: 1280px;
+ margin: 0 auto;
+ padding: 2rem;
+ box-sizing: border-box;
+}
+
+body {
+ background-color: rgb(26, 24, 24);
+ color: white;
+}
