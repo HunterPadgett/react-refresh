@@ -6,7 +6,7 @@
 }
 
 body {
- background-color: rgb(245, 240, 240);
+ background-color: rgb(255, 255, 255);
  color: rgb(19, 18, 18);
 }
 
@@ -16,7 +16,7 @@ body {
  justify-content: center;
 }
 
-.list {
+.task {
  display: flex;
  justify-content: center;
 }

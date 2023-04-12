@@ -8,18 +8,14 @@ export default function TaskList({
  completeToggle,
 }) {
  return (
-  <div className="list" key={id}>
-   <ul>
-    <div className="task">
-     <li>
-      <span style={{ backgroundColor: completed ? "green" : "white" }}>
-       {taskName}
-      </span>
-      <button onClick={() => completeToggle(id)}>✅</button>
-      <button onClick={() => deleteTask(id)}>❌</button>
-     </li>
-    </div>
-   </ul>
+  <div className="task" key={id}>
+   <li>
+    <span style={{ backgroundColor: completed ? "lightgreen" : "white" }}>
+     {taskName}
+    </span>
+    <button onClick={() => completeToggle(id)}>✅</button>
+    <button onClick={() => deleteTask(id)}>❌</button>
+   </li>
   </div>
  );
 }
