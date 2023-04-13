@@ -21,7 +21,18 @@ body {
  justify-content: center;
 }
 
-li, li>button {
+li,
+li > button {
  margin: 0.3rem;
 }
 
+.App {
+ /* display: flex; */
+}
+
+.inputArea {
+ display: flex;
+ flex-direction: column;
+ justify-self: center;
+ align-content: center;
+}
