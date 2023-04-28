@@ -1,11 +1,20 @@
 import React from "react";
 import { HiCheckBadge } from "react-icons/hi2";
-import { SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
+import {
+ SiJavascript,
+ SiHtml5,
+ SiCss3,
+ SiTailwindcss,
+ SiReact,
+ SiBootstrap,
+ SiExpress,
+} from "react-icons/si";
+import { FaNode } from "react-icons/fa";
 
-const Frontend = () => {
+const Dev = () => {
  return (
   <div className="skills__content">
-   <h3 className="skills__title">Frontend Developer</h3>
+   <h3 className="skills__title">Development</h3>
    <div className="skills__box">
     <div className="skills__group">
      <div className="skills__data">
@@ -21,10 +30,15 @@ const Frontend = () => {
       </div>
      </div>
      <div className="skills__data">
-      <HiCheckBadge />
+      <SiBootstrap />
       <div>
        <h3 className="skills__name">Bootstrap</h3>
-       <span className="skills__level">Intermediate</span>
+      </div>
+     </div>
+     <div className="skills__data">
+      <FaNode />
+      <div>
+       <h3 className="skills__name">Node.js</h3>
       </div>
      </div>
     </div>
@@ -36,17 +50,21 @@ const Frontend = () => {
       </div>
      </div>
      <div className="skills__data">
-      <HiCheckBadge />
+      <SiTailwindcss />
       <div>
-       <h3 className="skills__name">Typescript</h3>
-       <span className="skills__level">Basic</span>
+       <h3 className="skills__name">Tailwind</h3>
       </div>
      </div>
      <div className="skills__data">
-      <HiCheckBadge />
+      <SiReact />
       <div>
        <h3 className="skills__name">React</h3>
-       <span className="skills__level">Basic</span>
+      </div>
+     </div>
+     <div className="skills__data">
+      <SiExpress />
+      <div>
+       <h3 className="skills__name">Express</h3>
       </div>
      </div>
     </div>
@@ -55,4 +73,4 @@ const Frontend = () => {
  );
 };
 
-export default Frontend;
+export default Dev;
