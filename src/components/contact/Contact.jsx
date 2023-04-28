@@ -21,20 +21,22 @@ const Contact = () => {
  return (
   <section className="contact section" id="contact">
    <h2 className="section__title">Let's Connect</h2>
-   <span className="section__subtitle">Contact Me</span>
+   <span className="section__subtitle"></span>
 
    <div className="contact__container container grid">
     <div className="contact__content">
-     <h3 className="contact__title">Talk to me</h3>
+     {/* <h3 className="contact__title">
+      Send me an email or fill out the form below.
+     </h3> */}
 
      <div className="contact__info">
       <div className="contact__card">
        <HiOutlineMail className="contact__card-icon" />
 
        <h3 className="contact__card-title">Email</h3>
-       <span className="contact__card-data">cyphrsylph@gmail.com</span>
+       <span className="contact__card-data">hunterpadgett.dev@gmail.com</span>
 
-       <a href="mailto:cyphersylph@gmail.com" className="contact__button">
+       <a href="mailto:hunterpadgett.dev@gmail.com" className="contact__button">
         Write Me <HiOutlineArrowSmRight className="contact__button-icon" />
        </a>
       </div>
@@ -42,7 +44,7 @@ const Contact = () => {
     </div>
 
     <div className="contact__content">
-     <h3 className="contact__title">What's the project?</h3>
+     {/* <h3 className="contact__title">Have any questions?</h3> */}
 
      <form ref={form} onSubmit={sendEmail} className="contact__form">
       <div className="contact__form-div">

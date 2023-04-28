@@ -13,12 +13,8 @@ const About = () => {
     {/* <img src={AboutImg} alt="about" className="about__img" /> */}
     <div className="about__data">
      <Info />
-     <p className="about__description">
-      I create applications highlighting minimal design and friendly UI/UX
-      interfaces.
-     </p>
      <a download="" href={CV} className="button button--flex">
-      Download CV
+      Download resume
       <svg
        className="button__icon"
        xmlns="http://www.w3.org/2000/svg"
