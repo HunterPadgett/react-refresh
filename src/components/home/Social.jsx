@@ -5,12 +5,12 @@ const Social = () => {
  return (
   <div className="home__social">
    <a
-    href="https://twitter.com/huntapadgett"
+    href="https://www.linkedin.com/in/hunterpadgett1/"
     className="home__social-icon"
     target="_blank"
     rel="noreferrer"
    >
-    <FiTwitter />
+    <FiLinkedin />
    </a>
    <a
     href="https://github.com/HunterPadgett"
@@ -21,12 +21,12 @@ const Social = () => {
     <FiGithub />
    </a>
    <a
-    href="https://www.linkedin.com/in/hunterpadgett1/"
+    href="https://twitter.com/huntapadgett"
     className="home__social-icon"
     target="_blank"
     rel="noreferrer"
    >
-    <FiLinkedin />
+    <FiTwitter />
    </a>
   </div>
  );

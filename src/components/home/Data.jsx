@@ -11,10 +11,10 @@ const Data = () => {
     I like making good looking and responsive things and sticking them on the
     interwebs for others to enjoy.
    </p>
-   <a href="#portfolio" className="button button--flex">
+   <a href="#projects" className="button button--flex">
     Check out my projects
     <svg
-     class="button__icon"
+     className="button__icon"
      xmlns="http://www.w3.org/2000/svg"
      width="24"
      height="24"

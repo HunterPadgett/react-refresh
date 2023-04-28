@@ -9,11 +9,11 @@ import { SiJavascript } from "react-icons/si";
 const Info = () => {
  return (
   <div className="about__info grid">
-   <div className="about__box">
+   {/* <div className="about__box">
     <HiOutlineDesktopComputer className="about__icon" />
     <h3 className="about__title">Experience</h3>
     <span className="about__subtitle">3 Years</span>
-   </div>
+   </div> */}
    <div className="about__box">
     <HiOutlineTerminal className="about__icon" />
     <h3 className="about__title">Completed</h3>

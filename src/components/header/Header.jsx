@@ -25,8 +25,9 @@ const Header = () => {
   <header className="header">
    <nav className="nav container">
     <a href="index.html" className="nav__logo">
-     Portfolio
+     <div className="logo"></div>
     </a>
+
     <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
      <ul className="nav__list grid">
       <li className="nav__item">
@@ -43,18 +44,6 @@ const Header = () => {
       </li>
       <li className="nav__item">
        <a
-        href="#about"
-        onClick={() => setActiveNav("#about")}
-        className={
-         activeNav === "#about" ? "nav__link active-link" : "nav__link"
-        }
-       >
-        <HiOutlineUser className="nav__icon" />
-        About
-       </a>
-      </li>
-      <li className="nav__item">
-       <a
         href="#skills"
         onClick={() => setActiveNav("#skills")}
         className={
@@ -67,7 +56,7 @@ const Header = () => {
       </li>
       <li className="nav__item">
        <a
-        href="#portfolio"
+        href="#projects"
         onClick={() => setActiveNav("#portfolio")}
         className={
          activeNav === "#portfolio" ? "nav__link active-link" : "nav__link"
@@ -75,6 +64,18 @@ const Header = () => {
        >
         <HiOutlinePhotograph className="nav__icon" />
         Projects
+       </a>
+      </li>
+      <li className="nav__item">
+       <a
+        href="#about"
+        onClick={() => setActiveNav("#about")}
+        className={
+         activeNav === "#about" ? "nav__link active-link" : "nav__link"
+        }
+       >
+        <HiOutlineUser className="nav__icon" />
+        About
        </a>
       </li>
       <li className="nav__item">

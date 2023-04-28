@@ -8,15 +8,15 @@ const Footer = () => {
    <div className="footer__container container">
     <div className="footer__social">
      <a
-      href="https://twitter.com/cyphrsylph"
+      href="https://www.linkedin.com/in/hunterpadgett1/"
       className="home__social-icon"
       target="_blank"
       rel="noreferrer"
      >
-      <FiTwitter />
+      <FiLinkedin />
      </a>
      <a
-      href="https://www.github.com/kmaalig"
+      href="https://github.com/HunterPadgett"
       className="home__social-icon"
       target="_blank"
       rel="noreferrer"
@@ -24,12 +24,12 @@ const Footer = () => {
       <FiGithub />
      </a>
      <a
-      href="https://www.linkedin.com/in/kmaalig/"
+      href="https://twitter.com/huntapadgett"
       className="home__social-icon"
       target="_blank"
       rel="noreferrer"
      >
-      <FiLinkedin />
+      <FiTwitter />
      </a>
     </div>
     <span className="footer__copy">© 2023 HUNTER PADGETT</span>
