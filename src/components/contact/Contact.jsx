@@ -9,13 +9,22 @@ const Contact = () => {
  const sendEmail = (e) => {
   e.preventDefault();
 
-  emailjs.sendForm(
-   "service_s53x8mc",
-   "template_fwq8n7v",
-   form.current,
-   "cXginQ40keRVEt1YV"
-  );
-  e.target.reset();
+  emailjs
+   .sendForm(
+    process.env.EMAIL_SERVICE_ID,
+    process.env.EMAIL_TEMPLATE_ID,
+    form.current,
+    process.env.EMAIL_PUBLIC_KEY
+   )
+   .then(
+    (result) => {
+     console.log(result.text);
+    },
+    (error) => {
+     console.log(error.text);
+    }
+   );
+  // e.target.reset();
  };
 
  return (
@@ -48,38 +57,39 @@ const Contact = () => {
 
      <form ref={form} onSubmit={sendEmail} className="contact__form">
       <div className="contact__form-div">
-       <label className="contact__form-tag">Name</label>
        <input
         type="text"
         name="name"
         className="contact__form-input"
-        placeholder="Type your name"
+        placeholder="Your name"
+        required
        />
+       <label className="contact__form-tag">Name</label>
       </div>
 
       <div className="contact__form-div">
-       <label className="contact__form-tag">Email</label>
        <input
         type="email"
         name="email"
-        className="contact__form-input"
-        placeholder="Type your email"
+        className="contact__form-input email"
+        placeholder="Your email"
+        required
        />
+       <label className="contact__form-tag">Email</label>
       </div>
 
       <div className="contact__form-div contact__form-area">
-       <label className="contact__form-tag">Project</label>
        <textarea
-        name="project"
-        cols="30"
-        rows="10"
-        className="contact__form-input"
-        placeholder="Provide some project details..."
+        name="message"
+        className="contact__form-input message"
+        placeholder="Your brilliant ideas"
+        required
        ></textarea>
+       <label className="contact__form-tag">Message</label>
       </div>
 
       <button href="#contact" className="button button--flex">
-       Send Message
+       Send
        <svg
         className="button__icon"
         xmlns="http://www.w3.org/2000/svg"
