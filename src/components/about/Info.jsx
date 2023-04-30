@@ -5,7 +5,7 @@ import {
  HiOutlineSparkles,
  HiOutlineMail,
 } from "react-icons/hi";
-import { SiJavascript } from "react-icons/si";
+// import { SiJavascript } from "react-icons/si";
 
 const Info = () => {
  return (

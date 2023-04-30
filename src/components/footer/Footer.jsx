@@ -5,7 +5,7 @@ import { FiTwitter, FiGithub, FiLinkedin } from "react-icons/fi";
 const Footer = () => {
  return (
   <footer className="footer">
-   <div className="footer__container container">
+   <div className="footer__container">
     <div className="footer__social">
      <a
       href="https://www.linkedin.com/in/hunterpadgett1/"

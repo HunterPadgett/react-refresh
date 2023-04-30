@@ -1,30 +1,36 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./contact.css";
 import { HiOutlineMail, HiOutlineArrowSmRight } from "react-icons/hi";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
  const form = useRef();
+ const [emailStatus, setEmailStatus] = useState(null);
 
  const sendEmail = (e) => {
   e.preventDefault();
 
   emailjs
    .sendForm(
-    process.env.EMAIL_SERVICE_ID,
-    process.env.EMAIL_TEMPLATE_ID,
+    "service_dwjy89o",
+    "template_b1bnqs3",
     form.current,
-    process.env.EMAIL_PUBLIC_KEY
+    "D2MjuO0Au_YNrYQmD"
    )
    .then(
     (result) => {
+     setEmailStatus(true);
+     setTimeout(() => {
+      setEmailStatus(false);
+     }, 3000); // hide the message after 5 seconds
      console.log(result.text);
     },
     (error) => {
+     setEmailStatus(false);
      console.log(error.text);
     }
    );
-  // e.target.reset();
+  e.target.reset();
  };
 
  return (
@@ -34,10 +40,6 @@ const Contact = () => {
 
    <div className="contact__container container grid">
     <div className="contact__content">
-     {/* <h3 className="contact__title">
-      Send me an email or fill out the form below.
-     </h3> */}
-
      <div className="contact__info">
       <div className="contact__card">
        <HiOutlineMail className="contact__card-icon" />
@@ -53,8 +55,6 @@ const Contact = () => {
     </div>
 
     <div className="contact__content">
-     {/* <h3 className="contact__title">Have any questions?</h3> */}
-
      <form ref={form} onSubmit={sendEmail} className="contact__form">
       <div className="contact__form-div">
        <input
@@ -89,7 +89,7 @@ const Contact = () => {
       </div>
 
       <button href="#contact" className="button button--flex">
-       Send
+       {emailStatus ? "Success!" : "Send"}
        <svg
         className="button__icon"
         xmlns="http://www.w3.org/2000/svg"
