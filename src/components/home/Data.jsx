@@ -7,10 +7,7 @@ const Data = () => {
    <h3 className="home__subtitle">Content Editor</h3>
    <h3 className="home__subtitle">Email Developer</h3>
    <h3 className="home__subtitle">Front-End Web Developer</h3>
-   <p className="home__description">
-    I like making good looking and responsive things and sticking them on the
-    interwebs for others to enjoy.
-   </p>
+   <p className="home__description"></p>
    <a href="#projects" className="button button--flex">
     Check out my projects
     <svg

@@ -22,7 +22,7 @@ const Header = () => {
  const [activeNav, setActiveNav] = useState("#home");
 
  return (
-  <header className="header">
+  <header className="header" id="header">
    <nav className="nav container">
     <a href="index.html" className="nav__logo">
      <div className="logo"></div>

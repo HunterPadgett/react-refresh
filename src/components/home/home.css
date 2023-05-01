@@ -90,10 +90,6 @@
  margin-left: 9.25rem;
 }
 
-.wheel {
- animation: scroll 2s ease infinite;
-}
-
 @keyframes scroll {
  0% {
   transform: translateY(0);
@@ -101,6 +97,23 @@
  30% {
   transform: translateY(3.75rem);
  }
+}
+
+@keyframes arrow {
+ 0% {
+  transform: translateY(0);
+ }
+ 30% {
+  transform: translateY(0.25rem);
+ }
+}
+
+.home__scroll:hover .wheel {
+ animation: scroll 2s ease infinite;
+}
+
+.home__scroll:hover .home__scroll-arrow {
+ animation: arrow 2s ease infinite;
 }
 
 .home__scroll-name {

@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
@@ -14,19 +15,21 @@ import Portfolio from "./components/projects/Portfolio";
 const App = () => {
  return (
   <>
-   <Header />
-   <main className="main">
-    <Home />
-    <Skills />
-    <Portfolio />
-    <About />
-    {/* <Services /> */}
-    {/* <Qualification /> */}
-    {/* <Testimonials /> */}
-    <Contact />
-   </main>
-   <Footer />
-   <ScrollUp />
+   <>
+    <Header />
+    <main className="main">
+     <Home />
+     <Skills />
+     <Portfolio />
+     <About />
+     {/* <Services /> */}
+     {/* <Qualification /> */}
+     {/* <Testimonials /> */}
+     <Contact />
+    </main>
+    <Footer />
+    <ScrollUp />
+   </>
   </>
  );
 };

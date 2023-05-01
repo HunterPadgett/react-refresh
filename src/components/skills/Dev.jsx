@@ -1,5 +1,5 @@
 import React from "react";
-import { HiCheckBadge } from "react-icons/hi2";
+// import { HiCheckBadge } from "react-icons/hi2";
 import {
  SiJavascript,
  SiHtml5,
@@ -14,7 +14,7 @@ import { FaNode } from "react-icons/fa";
 const Dev = () => {
  return (
   <div className="skills__content">
-   <h3 className="skills__title">Development</h3>
+   <h3 className="skills__title">Web Development</h3>
    <div className="skills__box">
     <div className="skills__group">
      <div className="skills__data">
