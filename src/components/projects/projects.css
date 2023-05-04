@@ -28,7 +28,7 @@
 
 .project__card {
  background-color: var(--container-color);
- border: 1px solid rgba(0, 0, 0, 0.1);
+ border: 1px solid rgba(0, 0, 0, 12);
  padding: 1.25rem;
  border-radius: 1rem;
  box-shadow: var(--shadow);

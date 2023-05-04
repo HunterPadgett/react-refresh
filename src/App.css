@@ -67,7 +67,6 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
- 
 }
 
 html {
@@ -192,6 +191,13 @@ img {
 
  .section__subtitle {
   margin-bottom: var(--mb-3);
+ }
+
+ #skills,
+ #projects,
+ #about,
+ #contact {
+  scroll-margin-top: 3rem;
  }
 }
 

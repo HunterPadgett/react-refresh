@@ -14,7 +14,7 @@ import {
 const Header = () => {
  window.addEventListener("scroll", function () {
   const header = document.querySelector(".header");
-  if (this.scrollY >= 80) header.classList.add("scroll-header");
+  if (this.scrollY >= 95) header.classList.add("scroll-header");
   else header.classList.remove("scroll-header");
  });
 
