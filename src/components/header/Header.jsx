@@ -4,7 +4,7 @@ import {
  HiOutlineHome,
  HiOutlineUser,
  HiOutlineBadgeCheck,
- HiOutlineClipboardList,
+//  HiOutlineClipboardList,
  HiOutlinePhotograph,
  HiOutlineMail,
  HiX,

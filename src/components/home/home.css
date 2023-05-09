@@ -43,6 +43,7 @@
  padding-left: 5.4rem;
  font-weight: var(--font-normal);
  margin-bottom: var(--mb-1);
+ margin-top: var(--mb-1);
 }
 
 .home__subtitle::before {

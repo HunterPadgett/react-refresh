@@ -6,7 +6,7 @@ import {
  SiAdobephotoshop,
  SiFigma,
  SiMailchimp,
- SiWix,
+//  SiWix,
  SiGoogleanalytics,
 } from "react-icons/si";
 import { BiTestTube } from "react-icons/bi";
