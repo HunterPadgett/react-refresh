@@ -30,20 +30,20 @@ export const projectsData = [
     github: "https://github.com/HunterPadgett/freelance-template",
   },
   {
-    id: 4,
-    image: todo,
-    title: "Todo App",
-    category: "Web",
-    demo: "https://dontbelazy.netlify.app",
-    github: "https://github.com/HunterPadgett/daily-to-do-app",
-  },
-  {
     id: 5,
     image: wpBlog,
     title: "WordPress Blog",
     category: "Content",
     demo: "https://hunterpadgett8.wordpress.com/",
     github: "",
+  },
+  {
+    id: 4,
+    image: todo,
+    title: "Todo App",
+    category: "Web",
+    demo: "https://dontbelazy.netlify.app",
+    github: "https://github.com/HunterPadgett/daily-to-do-app",
   },
 ];
 
