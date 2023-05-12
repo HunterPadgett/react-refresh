@@ -6,8 +6,6 @@ import wpBlog from "../../assets/wp.webp";
 import vpn from "../../assets/vpn.png";
 import shopify from "../../assets/shopify.png";
 
-const br = <br />;
-
 export const projectsData = [
   {
     id: 1,
