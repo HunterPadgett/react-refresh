@@ -9,6 +9,7 @@ const ProjectItems = ({ item }) => {
       </div>
       <div className="project__info">
         <h3 className="project__title">{item.title}</h3>
+        <p className="project__subtitle">{item.subtitle ? item.subtitle : ""}</p>
         <a
           href={item.demo ? item.demo : "#projects"}
           target={item.demo ? "_blank" : ""}

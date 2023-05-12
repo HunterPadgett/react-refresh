@@ -1,14 +1,18 @@
 import lawSite from "../../assets/law.webp";
 import todo from "../../assets/todo.webp";
 import contentfulBlog from "../../assets/nothing.webp";
-import huntagram from "../../assets/hunna.webp";
+import huntagram from "../../assets/hunna.png";
 import wpBlog from "../../assets/wp.webp";
+import vpn from "../../assets/vpn.png";
+import shopify from "../../assets/shopify.png";
+
+const br = <br />;
 
 export const projectsData = [
   {
     id: 1,
     image: contentfulBlog,
-    title: "Contentful Blog",
+    title: "Contentful/Next.js Blog",
     category: "Content",
     demo: "https://nothing-blog.vercel.app/",
     github: "https://github.com/HunterPadgett/contentful-blog",
@@ -16,10 +20,27 @@ export const projectsData = [
   {
     id: 2,
     image: huntagram,
-    title: "Social Media App",
+    title: "Social Media Web App",
     category: "Web",
     demo: "https://huntagram.onrender.com/",
     github: "https://github.com/HunterPadgett/insta-clone",
+  },
+  {
+    id: 4,
+    image: vpn,
+    title: "ExpressVPN Landing Page",
+    category: "Web",
+    demo: "https://expressvpn-landingpage.netlify.app/",
+    github: "https://github.com/HunterPadgett/vpn-landing-page",
+  },
+  {
+    id: 7,
+    image: shopify,
+    title: `Shopify Store`,
+    subtitle: 'Store Password: pass1234',
+    category: "Content",
+    demo: "https://expressvpn-landingpage.netlify.app/",
+    github: "https://github.com/HunterPadgett/vpn-landing-page",
   },
   {
     id: 3,
@@ -38,9 +59,9 @@ export const projectsData = [
     github: "",
   },
   {
-    id: 4,
+    id: 6,
     image: todo,
-    title: "Todo App",
+    title: "Todo Web App",
     category: "Web",
     demo: "https://dontbelazy.netlify.app",
     github: "https://github.com/HunterPadgett/daily-to-do-app",
