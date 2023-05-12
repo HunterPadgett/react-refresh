@@ -35,10 +35,10 @@ export const projectsData = [
     id: 7,
     image: shopify,
     title: `Shopify Store`,
-    subtitle: 'Store Password: pass1234',
+    subtitle: "Store Password: pass1234",
     category: "Content",
-    demo: "https://expressvpn-landingpage.netlify.app/",
-    github: "https://github.com/HunterPadgett/vpn-landing-page",
+    demo: "https://hunters-sneakers.myshopify.com/",
+    github: "https://github.com/HunterPadgett/",
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ export const projectsData = [
     title: "WordPress Blog",
     category: "Content",
     demo: "https://hunterpadgett8.wordpress.com/",
-    github: "",
+    github: "https://github.com/HunterPadgett/",
   },
   {
     id: 6,
