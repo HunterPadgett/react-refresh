@@ -1,5 +1,5 @@
 import React from "react";
-import { FiTwitter, FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 const Social = () => {
  return (
@@ -20,14 +20,14 @@ const Social = () => {
    >
     <FiGithub />
    </a>
-   <a
+   {/* <a
     href="https://twitter.com/huntapadgett"
     className="home__social-icon"
     target="_blank"
     rel="noreferrer"
    >
     <FiTwitter />
-   </a>
+   </a> */}
   </div>
  );
 };
